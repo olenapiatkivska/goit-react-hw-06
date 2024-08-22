@@ -16,7 +16,7 @@ const SearchBox = () => {
         id={searchFieldId}
         type="text"
         value={filter}
-        onChange={() => dispatch(changeFilter(event.target.value))}
+        onChange={event => dispatch(changeFilter(event.target.value))}
       />
     </div>
   );

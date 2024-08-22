@@ -20,12 +20,12 @@ const contactsSlice = createSlice({
         };
       },
     },
-  },
-  deleteContact: {
-    reducer(state, action) {
-      state.items = state.items.filter(item => {
-        item.id !== action.payload;
-      });
+    deleteContact: {
+      reducer(state, action) {
+        state.items = state.items.filter(item => {
+          item.id !== action.payload;
+        });
+      },
     },
   },
 });

@@ -11,7 +11,6 @@ const ContactForm = () => {
   const dispatch = useDispatch();
   const nameFieldId = useId();
   const numberFieldId = useId();
-  const contactId = nanoid();
 
   const FeedbackSchema = Yup.object().shape({
     name: Yup.string()
@@ -33,7 +32,7 @@ const ContactForm = () => {
 
   const handleSubmit = (values, actions) => {
     const newContact = {
-      id: contactId,
+      id: nanoid(),
       name: values.name,
       number: values.number,
     };

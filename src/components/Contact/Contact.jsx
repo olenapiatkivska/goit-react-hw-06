@@ -20,6 +20,7 @@ const Contact = ({ contact }) => {
       </div>
       <button
         className={css.contactBtn}
+        type="button"
         onClick={() => dispatch(deleteContact(contact.id))}
       >
         Delete
